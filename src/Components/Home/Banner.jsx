@@ -8,7 +8,7 @@ const Banner = () => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         const categoryData = async() => {
-            const data = await fetch('https://dummyjson.com/products/categories');
+            const data = await fetch(`https://dummyjson.com/products/categories/${categories}`);
             const result = await data.json();
             setCategories(result);
         };
@@ -20,7 +20,8 @@ const Banner = () => {
             <div className='flex lg:flex-row flex-col lg:items-center justify-around lg:px-12 px-2 py-6 gap-2 uppercase text-lg font-semibold'>
                 {
                     categories.slice(0,8).map(category => <Link
-                    to="">
+                    key={category}
+                    to={`/category/${category}`}>
                         {category}
                     </Link>)
                 }
