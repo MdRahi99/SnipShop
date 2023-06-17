@@ -7,12 +7,10 @@ import vector2 from "../../Assets/Vector (1).png";
 
 const FeedBacks = () => {
     return (
-        <div className='py-4 lg:py-16 flex flex-col lg:flex-row items-center gap-4 lg:gap-20'>
+        <div className='py-4 lg:py-16 relative flex flex-col lg:flex-row items-center gap-4 lg:gap-20'>
             <div>
-                <div>
-                    <img src={background} alt="" />
-                    <img className='absolute top-28 left-24 lg:top-44 lg:left-32 h-96 w-96' src={person} alt="" />
-                </div>
+                <img src={background} alt="" />
+                <img className='absolute top-12 left-24 lg:top-28 lg:left-32 h-96 w-96' src={person} alt="" />
             </div>
             <div className='flex flex-col gap-4 lg:gap-8 p-3'>
                 <div>
