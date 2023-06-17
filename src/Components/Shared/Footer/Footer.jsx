@@ -11,7 +11,7 @@ import image from "../../../Assets/Vector 2.png";
 
 const Footer = () => {
     return (
-        <div className='lg:relative mt-32'>
+        <div className='relative'>
             <div>
                 <footer className="footer py-10 justify-between bg-[#175095] text-white lg:px-24 px-4">
                     <div>
@@ -69,7 +69,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </footer>
-                <img className='hidden lg:flex absolute top-0 left-20' src={image} alt="" />
+                <img className='hidden lg:flex absolute top-0 left-0' src={image} alt="" />
             </div>
         </div>
     );
