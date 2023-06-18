@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CategoryDetails = ({ data }) => {
     const { id, title, description, brand, price, discountPercentage, rating, stock, category, thumbnail, images } = data;
-    console.log(data)
+
     return (
         <div className='p-6 shadow-md bg-white rounded-2xl'>
             <img className='w-full lg:w-96 h-44 rounded-2xl mx-auto my-4' src={thumbnail} alt="" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CategoryDetails from "./CategoryDetails.jsx";
 
 const Categories = () => {
@@ -14,6 +14,9 @@ const Categories = () => {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 items-center my-6 gap-6'>
                 {detailsData.map(data => <CategoryDetails key={data.id} data={data}></CategoryDetails>)}
+            </div>
+            <div className='p-2 mx-auto text-center text-sm bg-black rounded-full text-white font-semibold w-40 my-6'>
+                <Link to='/' className='w-full mx-auto text-lg'>Back</Link>
             </div>
         </div>
     );

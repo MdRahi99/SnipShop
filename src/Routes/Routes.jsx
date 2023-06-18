@@ -3,6 +3,8 @@ import Main from "../Layouts/Main";
 import Home from "../Components/Home/Home";
 import ErrorPage from "../Components/Shared/ErrorPage/ErrorPage";
 import Categories from "../Components/Products/Categories";
+import Category from "../Components/Categories/Category";
+import Products from "../Components/Products/Products";
 
 const router = createBrowserRouter([
     {
@@ -14,10 +16,19 @@ const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
+          path: "/categories",
+          element: <Category></Category>
+        },
+        {
           path: "/category/:name",
           loader: async({params}) => await fetch(`https://dummyjson.com/products/category/${params.name}`),
           element: <Categories></Categories>
-        }
+        },
+        {
+          path: "/all-products",
+          loader: async() => await fetch('https://dummyjson.com/products'),
+          element: <Products></Products>
+        },
       ]
     },
     {

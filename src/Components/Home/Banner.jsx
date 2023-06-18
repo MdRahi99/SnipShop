@@ -17,9 +17,10 @@ const Banner = () => {
     
     return (
         <div className='bg-[#7DE1EF]'>
-            <div className='flex lg:flex-row flex-col lg:items-center justify-around lg:px-12 px-2 py-6 gap-2 uppercase text-lg font-semibold'>
+            <div className='flex lg:flex-row flex-col items-center justify-center lg:px-12 px-2 py-6 gap-12 uppercase text-sm font-semibold'>
                 {
                     categories.slice(0,8).map(category => <Link
+                    className='hover:border-b-2 p-2 hover:border-black'
                     key={category}
                     to={`/category/${category}`}>
                         {category}
