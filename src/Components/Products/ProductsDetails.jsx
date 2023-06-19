@@ -15,8 +15,8 @@ const ProductsDetails = ({ products }) => {
             <div className='flex items-center justify-center gap-8 my-4'>
                 <p className='text-[#0E4B80] text-md flex gap-1 font-bold'>${price}<span>USD</span></p>
             </div>
-            <div className='p-2 text-sm bg-black hover:bg-white hover:text-black hover:border-x-2 hover:border-black rounded-full text-white font-semibold w-full lg:w-40 mx-auto'>
-                <button className='w-full mx-auto'>Order Now</button>
+            <div className='p-2 text-sm text-center bg-black hover:bg-white hover:text-black hover:border-x-2 hover:border-black rounded-full text-white font-semibold w-full lg:w-40 mx-auto'>
+                <Link to={`/product-details/${id}`} className='w-full mx-auto'>Order Now</Link>
             </div>
         </div>
     );
