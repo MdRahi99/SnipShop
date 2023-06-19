@@ -14,7 +14,7 @@ const CategoryDetails = ({ data }) => {
                     <p className='font-bold'>${discountPercentage}</p>
                     <p className='text-[#FF4516] line-through font-bold'>${price}</p>
                 </div>
-                <Link>
+                <Link to={`/product-details/${id}`}>
                     <img className='bg-[#F0F0F0] p-4 rounded-full' src={img} alt="" />
                 </Link>
             </div>
